@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="Discover fascinating psychology fun facts about the human mind">
+    <title>2025 Psychology Fun Facts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .header p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1em;
+            line-height: 1.4;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .fact-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fact-number {
+            color: #667eea;
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .fact-text {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .emoji {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            flex: 1;
+            min-width: 140px;
+            padding: 16px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        .next-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .random-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .random-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        .progress {
+            text-align: center;
+            color: #666;
+            margin-top: 12px;
+            font-size: 0.9em;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.6em;
+            }
+
+            .header p {
+                font-size: 0.95em;
+            }
+
+            .card {
+                padding: 25px 20px;
+                min-height: 300px;
+                border-radius: 16px;
+            }
+
+            .fact-text {
+                font-size: 1.05em;
+                line-height: 1.6;
+            }
+
+            .emoji {
+                font-size: 2.2em;
+            }
+
+            button {
+                font-size: 0.95em;
+                padding: 14px 18px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 360px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+
+            .fact-text {
+                font-size: 1em;
+            }
+
+            .emoji {
+                font-size: 2em;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card.flip {
+            animation: flipCard 0.5s ease-in-out;
+        }
+
+        @keyframes flipCard {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(90deg); }
+            100% { transform: rotateY(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Psychology Fun Facts</h1>
+            <p>Discover fascinating insights about the human mind</p>
+        </div>
+
+        <div class="card" id="factCard">
+            <div class="fact-content">
+                <div class="emoji" id="emoji">🧠</div>
+                <div class="fact-number" id="factNumber">Fact 1 of 20</div>
+                <div class="fact-text" id="factText">Loading...</div>
+            </div>
+            
+            <div class="button-container">
+                <button class="next-btn" onclick="nextFact()">Next Fact →</button>
+                <button class="random-btn" onclick="randomFact()">🎲 Random</button>
+            </div>
+            
+            <div class="progress" id="progress">0% explored</div>
+        </div>
+    </div>
+
+    <script>
+        const facts = [
+            { emoji: "🧠", text: "Your brain generates about 12-25 watts of electricity - enough to power a low-wattage LED light bulb!" },
+            { emoji: "😴", text: "During sleep, your brain consolidates memories and clears out toxins that build up during the day, which is why sleep is crucial for learning." },
+            { emoji: "🎵", text: "Listening to music releases dopamine in the brain, the same chemical released when eating chocolate or falling in love." },
+            { emoji: "🤔", text: "Your brain uses 20% of your body's total oxygen and energy, despite being only 2% of your body weight." },
+            { emoji: "😊", text: "Smiling, even when you're not happy, can trick your brain into feeling better due to the facial feedback hypothesis." },
+            { emoji: "👥", text: "Humans can only maintain about 150 stable social relationships at once, known as Dunbar's number." },
+            { emoji: "⏰", text: "Your perception of time speeds up as you age because each year becomes a smaller percentage of your total life experience." },
+            { emoji: "🎨", text: "The color blue is associated with enhanced creativity and is often called the 'creativity color' in psychology studies." },
+            { emoji: "💭", text: "You have approximately 6,000 thoughts per day, and about 80% of them are negative according to some research." },
+            { emoji: "🏃", text: "Exercise doesn't just benefit your body - it increases the size of your hippocampus, improving memory and learning." },
+            { emoji: "🤗", text: "Hugging for 20 seconds releases oxytocin, which can help lower blood pressure and reduce stress." },
+            { emoji: "📱", text: "The average person checks their phone 96 times a day, creating a dopamine feedback loop similar to gambling addiction." },
+            { emoji: "🎯", text: "Your brain is more creative when you're tired, as the prefrontal cortex (responsible for filtering ideas) is less active." },
+            { emoji: "😱", text: "Fear and excitement trigger similar physiological responses - your brain often can't tell the difference between them." },
+            { emoji: "🗣️", text: "Speaking more than one language can delay the onset of dementia by an average of 5 years." },
+            { emoji: "🌟", text: "Novelty-seeking behavior triggers dopamine release, which is why trying new things makes us feel so good." },
+            { emoji: "👁️", text: "Your pupils dilate when you look at someone you're attracted to, which is an unconscious sign of interest." },
+            { emoji: "🧘", text: "Just 10 minutes of meditation can improve focus and reduce anxiety by physically changing your brain structure over time." },
+            { emoji: "🎭", text: "The phenomenon of 'emotional contagion' means you can 'catch' emotions from others just like you catch a cold." },
+            { emoji: "💪", text: "Your brain treats rejection the same way it treats physical pain, activating the same neural pathways." },
+            { emoji: "🎮", text: "Playing video games can improve your visual attention, spatial skills, and decision-making abilities." },
+            { emoji: "🌙", text: "People who stay up late tend to be more creative and have higher IQs than early birds, according to multiple studies." },
+            { emoji: "🍫", text: "Chocolate contains phenylethylamine, the same chemical your brain produces when you fall in love." },
+            { emoji: "🚶", text: "Walking through doorways causes forgetting - it's called the 'doorway effect' where your brain files away the previous room's context." },
+            { emoji: "👃", text: "Smell is the sense most closely linked to memory - a scent can instantly transport you back to childhood." },
+            { emoji: "🤝", text: "Holding hands with someone you love can reduce physical pain and stress levels significantly." },
+            { emoji: "💤", text: "You forget 50% of your dreams within 5 minutes of waking up, and 90% within 10 minutes." },
+            { emoji: "🎤", text: "Singing in the shower releases endorphins, which is why it makes you feel so good and confident." },
+            { emoji: "🌈", text: "The color red can increase your heart rate and make time seem to pass faster than it actually is." },
+            { emoji: "📚", text: "Reading fiction improves your ability to understand other people's emotions and perspectives." },
+            { emoji: "😂", text: "Laughter is contagious because of mirror neurons - your brain mimics the emotions you observe in others." },
+            { emoji: "🎪", text: "Nostalgia is actually a psychological defense mechanism that helps combat loneliness and anxiety." },
+            { emoji: "🌊", text: "The sound of ocean waves alters brain wave patterns, inducing a relaxed and meditative state." },
+            { emoji: "🍕", text: "Making decisions requires mental energy - this is why you crave junk food when you're mentally exhausted." },
+            { emoji: "👶", text: "Babies don't produce tears until they're about 1-3 months old, even though they cry from birth." },
+            { emoji: "🎬", text: "Watching a suspenseful movie increases your blood's clotting ability, preparing your body for potential injury." },
+            { emoji: "🌡️", text: "People literally feel warmer when they're socially included and colder when they're excluded." },
+            { emoji: "🎁", text: "Spending money on experiences rather than material goods leads to greater and longer-lasting happiness." },
+            { emoji: "🕐", text: "Time feels slower when you're in a life-threatening situation because your amygdala goes into overdrive, recording more memories." },
+            { emoji: "🤲", text: "Your brain can rewire itself throughout your entire life - a phenomenon called neuroplasticity." },
+            { emoji: "😢", text: "Crying is actually good for you - emotional tears contain stress hormones that get released from your body." },
+            { emoji: "🎓", text: "Teaching someone else is one of the most effective ways to learn something yourself." },
+            { emoji: "🌻", text: "Being in nature for just 20 minutes can significantly reduce stress hormone levels." },
+            { emoji: "💬", text: "Talking to yourself out loud can help you organize your thoughts and solve problems more effectively." },
+            { emoji: "🎲", text: "Your brain is wired to be more motivated by avoiding losses than by acquiring gains." },
+            { emoji: "🌞", text: "Sunlight exposure increases serotonin levels, which is why you feel happier on sunny days." },
+            { emoji: "🎸", text: "Learning to play a musical instrument increases the connectivity between your brain hemispheres." },
+            { emoji: "😴", text: "You can't sneeze in your sleep because the brain shuts down the reflex during REM sleep." },
+            { emoji: "🌸", text: "The smell of rosemary can improve memory performance by up to 75%." },
+            { emoji: "💑", text: "Couples who are in love synchronize their heart rates when they look into each other's eyes." },
+            { emoji: "🎯", text: "You're more likely to achieve your goals if you keep them to yourself rather than announcing them." },
+            { emoji: "🍃", text: "The color green is the easiest color for the human eye to process and has a calming effect." },
+            { emoji: "🤔", text: "Overthinking can cause physical symptoms like headaches, muscle tension, and fatigue." },
+            { emoji: "🎊", text: "Anticipating a positive event can be more enjoyable than the event itself." },
+            { emoji: "👀", text: "People blink less when they're focused on something, which is why staring at screens causes dry eyes." },
+            { emoji: "🌙", text: "Your brain is more active when you're sleeping than when you're watching TV." },
+            { emoji: "🤗", text: "Physical warmth promotes interpersonal warmth - holding a hot drink makes you judge others more positively." },
+            { emoji: "📝", text: "Writing by hand engages your brain more deeply than typing, leading to better memory retention." },
+            { emoji: "🎨", text: "Doodling while listening can actually improve memory recall by up to 29%." },
+            { emoji: "😌", text: "Spending money on others makes you happier than spending it on yourself." },
+            { emoji: "🌟", text: "Your brain creates false memories all the time - about 50% of your memories contain significant inaccuracies." },
+            { emoji: "🎪", text: "The 'Spotlight Effect' means you think people notice you much more than they actually do." },
+            { emoji: "🌊", text: "Cold showers can reduce symptoms of depression by stimulating electrical impulses to the brain." },
+            { emoji: "👂", text: "Your ears never stop working, even when you sleep - your brain just ignores most sounds." },
+            { emoji: "🎭", text: "Actors who do method acting can actually change their brain chemistry and body functions." },
+            { emoji: "💭", text: "Daydreaming is a sign of a healthy, active brain and enhances creativity." },
+            { emoji: "🌈", text: "Synesthesia is a condition where people can 'hear' colors or 'taste' words - about 4% of people have it." },
+            { emoji: "😊", text: "Gratitude literally rewires your brain for happiness when practiced regularly." },
+            { emoji: "🎯", text: "Your brain makes decisions up to 10 seconds before you're consciously aware of them." },
+            { emoji: "🌸", text: "The scent of lavender can reduce crying in babies and improve sleep quality in adults." },
+            { emoji: "🎮", text: "Playing Tetris for just 3 minutes can reduce cravings for food, drugs, and other addictions." },
+            { emoji: "💪", text: "Your brain cannot distinguish between physical and mental practice - visualization is almost as effective as doing." },
+            { emoji: "👥", text: "Being lonely can be as harmful to your health as smoking 15 cigarettes a day." },
+            { emoji: "🎵", text: "The 'chills' you get from music are caused by dopamine release and only happen in about 50% of people." },
+            { emoji: "🌙", text: "Sleeping on a problem really does help - your subconscious works on solutions while you sleep." },
+            { emoji: "😂", text: "It takes 17 muscles to smile and 43 to frown, making smiling the more efficient choice." },
+            { emoji: "🎨", text: "Creative people's brains work differently - they have more connections between different brain regions." },
+            { emoji: "🌟", text: "The 'Peak-End Rule' means you judge experiences based on their peak moment and ending, not the overall experience." },
+            { emoji: "💭", text: "You can only remember 3-4 things at once in your short-term memory." },
+            { emoji: "🎯", text: "Setting specific, challenging goals leads to higher performance than setting easy or vague goals." },
+            { emoji: "😴", text: "Napping for 10-20 minutes can improve alertness and performance without causing grogginess." },
+            { emoji: "🌊", text: "The 'Blue Mind' theory suggests being near water makes people happier, calmer, and more creative." },
+            { emoji: "🎪", text: "Your personality can change throughout your life - contrary to popular belief, it's not fixed after age 30." },
+            { emoji: "💡", text: "Your best ideas often come in the shower because relaxation allows your subconscious to make connections." },
+            { emoji: "👃", text: "Your sense of smell is 10,000 times more sensitive than your other senses." },
+            { emoji: "🌈", text: "Color can affect your appetite - red and yellow make you hungry, which is why fast food chains use them." },
+            { emoji: "🎯", text: "The Zeigarnik Effect means you remember unfinished tasks better than completed ones." },
+            { emoji: "😊", text: "Acts of kindness release serotonin and oxytocin in both the giver and receiver." },
+            { emoji: "🌟", text: "Your brain weighs about 3 pounds but uses more energy than any other organ in your body." },
+            { emoji: "🎭", text: "Imposter syndrome affects up to 70% of successful people at some point in their lives." },
+            { emoji: "💪", text: "Willpower is like a muscle - it gets tired with use but can be strengthened with practice." },
+            { emoji: "🌸", text: "Forest bathing (spending time in nature) can boost immune function for up to 30 days." },
+            { emoji: "🎵", text: "Background music can improve performance on repetitive tasks but hinders complex cognitive work." },
+            { emoji: "😴", text: "Your brain reorganizes and archives memories during sleep, which is why pulling all-nighters hurts learning." },
+            { emoji: "🌙", text: "Night owls and morning larks have different cognitive peak times based on their chronotype." },
+            { emoji: "🎨", text: "Looking at art activates the same parts of the brain as falling in love." },
+            { emoji: "💭", text: "Your inner voice speaks at about 4,000 words per minute, which is why your thoughts seem so fast." },
+            { emoji: "🌟", text: "The average human attention span has decreased from 12 seconds in 2000 to 8 seconds today." },
+            { emoji: "🎯", text: "The 'Pygmalion Effect' shows that higher expectations lead to better performance - believing in someone helps them succeed." },
+            { emoji: "🧠", text: "Your brain can process images in as little as 13 milliseconds, faster than you can blink." },
+            { emoji: "💭", text: "Multitasking is a myth - your brain actually switches between tasks rapidly, reducing efficiency by 40%." },
+            { emoji: "😌", text: "Forgiveness reduces stress, lowers blood pressure, and strengthens your immune system." },
+            { emoji: "🎨", text: "People who are messy and disorganized tend to be more creative and open to new experiences." },
+            { emoji: "👥", text: "The 'Bystander Effect' means the more people present during an emergency, the less likely anyone is to help." },
+            { emoji: "🌙", text: "Blue light from screens suppresses melatonin production, disrupting your sleep-wake cycle." },
+            { emoji: "🎵", text: "Your favorite song is usually one you listened to during an emotionally significant time in your life." },
+            { emoji: "💪", text: "Mental fatigue can reduce physical performance by up to 15%, even when muscles aren't tired." },
+            { emoji: "😊", text: "Positive self-talk can improve performance, reduce stress, and increase life satisfaction." },
+            { emoji: "🌸", text: "Gardening and working with soil exposes you to bacteria that act as natural antidepressants." },
+            { emoji: "🎭", text: "Your brain fills in gaps in your perception, which is why you don't notice the blind spot in your vision." },
+            { emoji: "🌈", text: "Warm colors like red and orange increase energy levels, while cool colors like blue promote calmness." },
+            { emoji: "💡", text: "The 'Eureka moment' happens when your brain suddenly makes connections between previously unrelated information." },
+            { emoji: "👀", text: "Making eye contact triggers the same reward centers in your brain as receiving money." },
+            { emoji: "🎯", text: "Procrastination is often a way of coping with anxiety about starting or completing a task." },
+            { emoji: "😴", text: "The memory of a dream can trigger the same emotional response as if the event actually happened." },
+            { emoji: "🌟", text: "Your brain creates patterns even when none exist - this is called pareidolia, like seeing faces in clouds." },
+            { emoji: "🎪", text: "The 'Halo Effect' means if you like one aspect of someone, you're more likely to view their other traits positively." },
+            { emoji: "💬", text: "Venting anger actually increases aggression rather than reducing it, contrary to popular belief." },
+            { emoji: "🌊", text: "Taking a warm bath before bed can improve sleep quality by mimicking the natural drop in body temperature." },
+            { emoji: "🎮", text: "Gaming activates the brain's reward system more powerfully than most other activities." },
+            { emoji: "😂", text: "Humor is a complex cognitive function that requires multiple brain regions working together." },
+            { emoji: "🌻", text: "Exposure to natural sunlight for 30 minutes daily can significantly improve mood and mental health." },
+            { emoji: "🎓", text: "The 'Testing Effect' shows that taking practice tests improves memory better than simply re-reading material." },
+            { emoji: "💭", text: "Your brain consumes about 400-500 calories per day, which is why thinking hard can make you hungry." },
+            { emoji: "🤔", text: "Decision fatigue is real - making too many decisions depletes your mental energy throughout the day." },
+            { emoji: "🎨", text: "Viewing abstract art activates different brain regions than viewing realistic art." },
+            { emoji: "😊", text: "Keeping a gratitude journal for just 3 weeks can increase happiness levels for up to 6 months." },
+            { emoji: "🌙", text: "Your brain paralyzes your body during REM sleep to prevent you from acting out your dreams." },
+            { emoji: "💪", text: "Mental rehearsal activates the same brain pathways as physical practice, improving actual performance." },
+            { emoji: "🎯", text: "The 'Contrast Effect' means you judge things relative to what you just experienced, not objectively." },
+            { emoji: "👂", text: "Listening to sad music when you're sad can actually make you feel better through emotional validation." },
+            { emoji: "🌈", text: "Color blindness affects about 8% of men but only 0.5% of women due to genetics." },
+            { emoji: "😴", text: "Sleeping on your right side can worsen heartburn, while left-side sleeping improves digestion." },
+            { emoji: "🎵", text: "Musicians' brains have stronger connections between motor and auditory regions than non-musicians." },
+            { emoji: "💡", text: "The 'Aha!' moment releases dopamine, which is why solving puzzles feels so satisfying." },
+            { emoji: "🌟", text: "Your brain can hold about 2.5 petabytes of information - equivalent to 3 million hours of TV shows." },
+            { emoji: "😢", text: "Emotional tears contain different chemicals than reflex tears, including natural painkillers." },
+            { emoji: "🎭", text: "The 'Dunning-Kruger Effect' means incompetent people overestimate their abilities while experts underestimate theirs." },
+            { emoji: "🤗", text: "Physical touch releases oxytocin, which builds trust and strengthens social bonds." },
+            { emoji: "🌸", text: "The Japanese practice of 'Shinrin-yoku' (forest bathing) reduces cortisol and anxiety levels." },
+            { emoji: "💭", text: "Your brain makes up stories to explain things it doesn't understand, which can create false memories." },
+            { emoji: "🎯", text: "The 'Placebo Effect' works even when people know they're taking a placebo in some cases." },
+            { emoji: "😊", text: "Smiling is universal across all cultures and is recognized even by people born blind." },
+            { emoji: "🌙", text: "REM sleep increases as the night progresses, which is why your most vivid dreams happen before waking." },
+            { emoji: "🎨", text: "Artistic activities stimulate the release of dopamine, which explains the 'flow state' artists experience." },
+            { emoji: "💪", text: "Cold exposure activates brown fat, increases metabolism, and can improve mood through endorphin release." },
+            { emoji: "👥", text: "The 'Mere Exposure Effect' means you tend to like things more simply because you're familiar with them." },
+            { emoji: "🎵", text: "Songs that get stuck in your head (earworms) typically have specific musical patterns and repetition." },
+            { emoji: "🌊", text: "The sound of rain or white noise helps you sleep by masking disruptive sounds and creating consistency." },
+            { emoji: "😴", text: "Power naps of 20 minutes can boost alertness by 100% and improve performance by 34%." },
+            { emoji: "🎯", text: "The 'Recency Effect' means you remember the last items in a list better than those in the middle." },
+            { emoji: "💡", text: "Brainstorming alone is often more effective than group brainstorming due to 'production blocking'." },
+            { emoji: "🌟", text: "Your subconscious mind processes about 11 million pieces of information per second, while your conscious mind handles about 40." },
+            { emoji: "😊", text: "Random acts of kindness increase serotonin in the giver, receiver, and anyone who witnesses it." },
+            { emoji: "🎭", text: "The 'Cocktail Party Effect' allows you to focus on a single conversation in a noisy room." },
+            { emoji: "🌈", text: "Yellow is the first color babies learn to distinguish, and it's processed fastest by the eye." },
+            { emoji: "💭", text: "Intrusive thoughts are normal - about 94% of people experience unwanted thoughts regularly." },
+            { emoji: "🎮", text: "Action video games improve visual attention, hand-eye coordination, and decision-making speed." },
+            { emoji: "😌", text: "Deep breathing activates your parasympathetic nervous system, triggering a relaxation response." },
+            { emoji: "🌸", text: "Pet ownership reduces stress hormones, lowers blood pressure, and increases oxytocin levels." },
+            { emoji: "🎯", text: "The 'Primacy Effect' means you remember the first items in a list better than later ones." },
+            { emoji: "💪", text: "Exercise increases BDNF (brain-derived neurotrophic factor), which helps grow new brain cells." },
+            { emoji: "😴", text: "Lack of sleep impairs judgment as much as being legally drunk in many cognitive tasks." },
+            { emoji: "🌙", text: "Your circadian rhythm is slightly longer than 24 hours, which is why you can stay up late easier than wake up early." },
+            { emoji: "🎵", text: "Music therapy can help recover speech after a stroke by using melody to access language areas." },
+            { emoji: "👀", text: "You blink about 15-20 times per minute, but only about 4-5 times when reading or using screens." },
+            { emoji: "🌟", text: "The 'Google Effect' means you're less likely to remember information if you know you can look it up online." },
+            { emoji: "😊", text: "Optimists live longer, recover faster from illness, and have stronger immune systems than pessimists." },
+            { emoji: "🎨", text: "Creativity peaks at different times for different people based on their chronotype and cognitive style." },
+            { emoji: "💡", text: "The 'Incubation Effect' shows that taking breaks from problems helps your brain solve them unconsciously." },
+            { emoji: "🌊", text: "Hydrotherapy (alternating hot and cold water) can improve mood, circulation, and immune function." },
+            { emoji: "🎯", text: "The 'Anchoring Effect' means the first piece of information you receive heavily influences your judgment." },
+            { emoji: "😴", text: "Napping for 60-90 minutes allows you to complete a full sleep cycle, improving creativity and memory." },
+            { emoji: "💭", text: "Your brain can't actually multitask - it just switches attention quickly, losing efficiency each time." },
+            { emoji: "🎭", text: "The 'Fundamental Attribution Error' means you blame others' behavior on personality but your own on circumstances." },
+            { emoji: "🌸", text: "Aromatherapy with essential oils can influence emotions by directly affecting the limbic system." },
+            { emoji: "🎵", text: "Perfect pitch (absolute pitch) is more common in people who speak tonal languages like Mandarin." },
+            { emoji: "😊", text: "Expressing gratitude activates the hypothalamus, affecting sleep, metabolism, and stress levels." },
+            { emoji: "💪", text: "Mental toughness is trainable - your brain adapts to stress through repeated exposure and recovery." },
+            { emoji: "🌟", text: "Your brain's neurons fire in patterns that create unique 'neural signatures' for every memory and thought." },
+            { emoji: "🎯", text: "The 'Sunk Cost Fallacy' makes you continue investing in something because you've already invested, even when it's not worthwhile." },
+            { emoji: "🌙", text: "Lucid dreaming (knowing you're dreaming while dreaming) can be learned through practice and techniques." },
+            { emoji: "😴", text: "Sleep deprivation affects emotional regulation more than cognitive function, making you more reactive." },
+            { emoji: "🎨", text: "Abstract thinking and creativity are enhanced in bilingual individuals due to mental flexibility." },
+            { emoji: "💡", text: "The 'Einstellung Effect' means expertise can sometimes hinder problem-solving by making you rely on familiar solutions." },
+            { emoji: "🌈", text: "Synesthetes who associate colors with numbers often perform better at memory tasks involving those numbers." },
+            { emoji: "😊", text: "Volunteering activates the same pleasure centers in the brain as eating food or receiving money." },
+            { emoji: "🎭", text: "The 'False Consensus Effect' makes you think more people agree with you than actually do." },
+            { emoji: "💭", text: "Your brain can rewire itself in just 8 weeks with consistent meditation practice, changing brain density." },
+            { emoji: "🌟", text: "Déjà vu might occur when your brain processes new information as a memory, creating a false sense of familiarity." },
+            { emoji: "🎯", text: "The 'Framing Effect' shows that people react differently to the same choice depending on how it's presented." },
+            { emoji: "😴", text: "Your brain temperature drops during sleep, which is why you sleep better in cooler rooms around 65-68°F." },
+            { emoji: "💭", text: "Internal dialogue uses the same brain regions as actual speech, which is why thinking can feel like talking." },
+            { emoji: "🎨", text: "People who engage in creative hobbies are 7-10% more likely to perform better at their jobs." },
+            { emoji: "🌈", text: "The 'Stroop Effect' shows how difficult it is to ignore automatic processes like reading." },
+            { emoji: "😊", text: "Practicing self-compassion is more effective than self-esteem for long-term mental health." },
+            { emoji: "💪", text: "Visualization activates up to 90% of the same neural networks as actual physical performance." },
+            { emoji: "🎵", text: "Tempo affects your heart rate - fast music can increase it, slow music can decrease it." },
+            { emoji: "👥", text: "The 'Chameleon Effect' makes you unconsciously mimic the gestures and mannerisms of people you're with." },
+            { emoji: "🌸", text: "Horticultural therapy has been shown to reduce symptoms of depression and anxiety by 30-40%." },
+            { emoji: "🎭", text: "Your personality is about 40-50% genetic and 50-60% shaped by environment and experiences." },
+            { emoji: "💡", text: "The 'Availability Heuristic' makes you judge likelihood based on how easily examples come to mind." },
+            { emoji: "😴", text: "Dreams during REM sleep are typically more vivid and story-like than dreams during other sleep stages." },
+            { emoji: "🌟", text: "Your brain can detect fearful faces in a crowd faster than happy or neutral faces as a survival mechanism." },
+            { emoji: "🎯", text: "The 'Ikea Effect' makes you value things more when you've put effort into creating them." },
+            { emoji: "🧠", text: "Your brain's left and right hemispheres communicate through 200-300 million nerve fibers in the corpus callosum." },
+            { emoji: "😊", text: "Psychological distance from problems (imagining advice for a friend) improves decision-making quality." },
+            { emoji: "🌙", text: "Full moon nights have no scientifically proven effect on sleep quality or psychiatric symptoms despite popular belief." },
+            { emoji: "💭", text: "The average person has about 70,000 thoughts per day, though this number varies widely." },
+            { emoji: "🎨", text: "Art therapy can help process trauma by accessing emotions through non-verbal expression." },
+            { emoji: "🌊", text: "The color of your environment affects perception of temperature - blue rooms feel cooler than red rooms." },
+            { emoji: "😌", text: "Progressive muscle relaxation can reduce anxiety by 60% when practiced regularly for 2-3 weeks." },
+            { emoji: "🎵", text: "Mozart's music doesn't make you smarter, but the 'Mozart Effect' shows temporary spatial reasoning boosts." },
+            { emoji: "💪", text: "Mental imagery before athletic performance can improve outcomes by 10-15%." },
+            { emoji: "👀", text: "Your peripheral vision is more sensitive to motion than your central vision as an evolutionary survival trait." },
+            { emoji: "🌟", text: "The 'Impostor Syndrome' often affects high achievers more than average performers." },
+            { emoji: "🎯", text: "Loss aversion means losing $20 feels about twice as bad as finding $20 feels good." },
+            { emoji: "😴", text: "Sleep spindles (bursts of brain activity during sleep) are linked to intelligence and learning ability." },
+            { emoji: "🎭", text: "The 'Barnum Effect' explains why vague personality descriptions seem accurate - your brain fills in the details." },
+            { emoji: "💡", text: "Insight problems are better solved with an 'Aha!' moment than through systematic analysis." },
+            { emoji: "🌈", text: "Color preferences are partly universal and partly cultural - blue is the most universally liked color." },
+            { emoji: "😊", text: "Social connections are as important for longevity as not smoking and more important than exercise." },
+            { emoji: "🧠", text: "Your brain generates new neurons throughout life in the hippocampus, challenging old beliefs about brain aging." },
+            { emoji: "🎵", text: "Singing together in groups synchronizes heartbeats and releases oxytocin, building social bonds." },
+            { emoji: "💭", text: "The 'Tip of the Tongue' phenomenon happens when you know you know something but can't access it." },
+            { emoji: "🌸", text: "Spending just 5 minutes outdoors in nature can improve self-esteem and mood significantly." },
+            { emoji: "🎯", text: "The 'Confirmation Bias' makes you seek information that confirms what you already believe." },
+            { emoji: "😴", text: "Your body temperature naturally drops in the evening, signaling it's time to sleep through melatonin release." },
+            { emoji: "💪", text: "Growth mindset (believing abilities can improve) leads to better performance than fixed mindset." },
+            { emoji: "🌟", text: "Face recognition is so important that your brain has a specialized area (fusiform face area) just for it." },
+            { emoji: "🎨", text: "Engaging with art increases blood flow to the brain by up to 10%, similar to looking at a loved one." },
+            { emoji: "😊", text: "The 'Ben Franklin Effect' shows that doing someone a favor makes you like them more, not less." },
+            { emoji: "🌙", text: "Chronotype (whether you're a morning or evening person) is about 50% genetic." },
+            { emoji: "💡", text: "The 'Generation Effect' means you remember information better if you generate it yourself rather than just read it." },
+            { emoji: "🎭", text: "Mirror neurons fire both when you perform an action and when you watch someone else do it." },
+            { emoji: "🌊", text: "The sound frequency of a cat's purr (25-150 Hz) promotes bone healing and reduces pain in humans." },
+            { emoji: "😴", text: "Microsleeps (brief 1-2 second sleep episodes) can occur when you're sleep deprived, even with eyes open." },
+            { emoji: "🎯", text: "The 'Endowment Effect' makes you overvalue things simply because you own them." },
+            { emoji: "💭", text: "Your working memory can typically hold 7±2 items, which is why phone numbers are often 7 digits." },
+            { emoji: "🌟", text: "Emotional memories are stronger and more detailed because the amygdala enhances memory consolidation." },
+            { emoji: "🎵", text: "Listening to music before a task can prime your brain for better performance through mood enhancement." },
+            { emoji: "😊", text: "Complimenting someone lights up the same reward centers in their brain as receiving money." },
+            { emoji: "🧠", text: "Brain waves synchronize between people during meaningful conversations, showing true neural connection." },
+            { emoji: "🌈", text: "Tetrachromats (mostly women) can see 100 million colors compared to the typical 1 million colors." },
+            { emoji: "💪", text: "Cold water immersion after stress can reset your nervous system and improve mood rapidly." },
+            { emoji: "🎨", text: "Dancing combines physical activity, social interaction, and creativity, making it one of the best activities for brain health." },
+            { emoji: "😴", text: "Sleep talking usually occurs during non-REM sleep and rarely reveals secrets (it's mostly nonsense)." },
+            { emoji: "🌸", text: "The scent of peppermint can improve concentration and cognitive performance by 15-20%." },
+            { emoji: "🎯", text: "The 'Serial Position Effect' combines primacy and recency effects in memory - you remember beginnings and endings best." },
+            { emoji: "💡", text: "Divergent thinking (generating many solutions) peaks when you're slightly distracted or in a diffuse mental state." },
+            { emoji: "👥", text: "Social media activates the same brain reward systems as addictive substances like cocaine." },
+            { emoji: "🌟", text: "Your brain continues developing until around age 25, with the prefrontal cortex (decision-making) maturing last." },
+            { emoji: "😊", text: "Authentic pride (from achievement) boosts confidence, while hubristic pride (from ego) harms relationships." },
+            { emoji: "🎭", text: "The 'Spotlight Effect' and 'Illusion of Transparency' mean people notice your emotions and mistakes far less than you think." },
+            { emoji: "💭", text: "Rumination (repetitive negative thinking) activates the same brain networks as depression." },
+            { emoji: "🌙", text: "Your circadian rhythm affects more than sleep - it influences digestion, hormone release, and even wound healing." },
+            { emoji: "🎵", text: "Learning music as a child enhances verbal memory and reading skills into adulthood." },
+            { emoji: "😴", text: "Sleep apnea affects 22 million Americans and can significantly impair cognitive function and mood." },
+            { emoji: "🧠", text: "Your brain uses 20% of your oxygen but can survive only 5-10 minutes without it before permanent damage occurs." },
+            { emoji: "🌊", text: "Hydrotherapy dates back thousands of years and works by triggering the parasympathetic nervous system." },
+            { emoji: "💪", text: "Mental contrasting (visualizing success AND obstacles) is more effective than positive thinking alone." },
+            { emoji: "🎨", text: "Coloring activates different brain areas than drawing, making adult coloring books effective stress relievers." },
+            { emoji: "😊", text: "Self-affirmations work by activating brain reward centers and reducing stress-related neural activity." },
+            { emoji: "🌟", text: "The 'Pratfall Effect' means people like you more after you make a minor mistake, as it makes you seem more human." },
+            { emoji: "🎯", text: "Priming effects show that subtle environmental cues can influence behavior without conscious awareness." },
+            { emoji: "💡", text: "The 'Einstellung Effect' in chess shows that expertise can create mental blindness to better solutions." },
+            { emoji: "🌈", text: "Color psychology in marketing is real - colors influence purchasing decisions within 90 seconds." },
+            { emoji: "😴", text: "Delayed Sleep Phase Syndrome makes some people naturally function better late at night - it's not just preference." },
+            { emoji: "🎭", text: "Your 'autobiographical memory' (personal life story) is constantly being rewritten and updated by your current perspective." },
+            { emoji: "💭", text: "The 'Curse of Knowledge' makes it hard to explain things once you understand them - you forget what it's like not to know." },
+            { emoji: "🌸", text: "Ecotherapy (nature-based interventions) can be as effective as medication for mild to moderate depression." },
+            { emoji: "🎵", text: "Tempo in music affects shopping behavior - slow music makes people browse longer and buy more." },
+            { emoji: "😊", text: "The 'Peak Happiness' age varies by culture, but many studies show a U-shaped curve with peaks in youth and old age." },
+            { emoji: "💪", text: "Grit (passion and perseverance) is a better predictor of success than IQ in many domains." },
+            { emoji: "🌟", text: "Your brain's default mode network activates during rest and is crucial for creativity and self-reflection." },
+            { emoji: "🧠", text: "Neuroplasticity means London taxi drivers have larger hippocampi from memorizing complex city layouts." },
+            { emoji: "🎯", text: "The 'Planning Fallacy' makes you underestimate how long tasks will take, even when you've done similar tasks before." },
+            { emoji: "😴", text: "Sleep deprivation impairs the brain's ability to clear amyloid plaques, potentially increasing Alzheimer's risk." },
+            { emoji: "🌊", text: "The 'Blue Mind' effect explains why 80% of the world's population lives within 60 miles of water." },
+            { emoji: "💡", text: "Counterfactual thinking ('what if' scenarios) helps with learning but can also fuel regret and depression." },
+            { emoji: "🎨", text: "Art viewing activates the brain's reward system and can reduce stress hormone levels by 25%." },
+            { emoji: "😊", text: "Psychological richness (varied, interesting experiences) may be as important for well-being as happiness or meaning." },
+            { emoji: "🌟", text: "Your brain's amygdala (fear center) shrinks with age, which is partly why older adults are often less anxious." },
+            { emoji: "🎯", text: "The 'Paradox of Choice' shows that having too many options can lead to anxiety and decision paralysis." },
+            { emoji: "😴", text: "Your brain cycles through sleep stages every 90 minutes, with each cycle containing different ratios of deep and REM sleep." },
+            { emoji: "💭", text: "Cognitive dissonance creates mental discomfort when your beliefs and actions don't align, motivating you to change one or both." },
+            { emoji: "🎨", text: "Creative people show more activation in both brain hemispheres simultaneously compared to less creative individuals." },
+            { emoji: "🌈", text: "The 'Hawthorne Effect' means people change their behavior when they know they're being observed." },
+            { emoji: "😊", text: "Expressive writing about traumatic events for 15-20 minutes daily can improve immune function and reduce stress." },
+            { emoji: "💪", text: "The 'Runner's High' is caused by endocannabinoids (similar to cannabis compounds) produced naturally during exercise." },
+            { emoji: "🎵", text: "Absolute pitch is 40 times more common in people who start musical training before age 4." },
+            { emoji: "👥", text: "The 'Ringelmann Effect' shows that people exert less effort in groups than when working alone." },
+            { emoji: "🌸", text: "Biophilic design (incorporating nature into buildings) can reduce stress by 15% and improve productivity by 6%." },
+            { emoji: "🎭", text: "Your sense of self is partially an illusion created by your brain to maintain narrative consistency." },
+            { emoji: "💡", text: "The 'Einstellung Effect' shows that knowing too much can prevent you from seeing innovative solutions." },
+            { emoji: "😴", text: "Sleep inertia (grogginess after waking) is worse if you wake during deep sleep rather than light sleep." },
+            { emoji: "🌟", text: "Your brain uses more energy imagining future events than remembering past ones due to the complexity of prediction." },
+            { emoji: "🎯", text: "The 'Gambler's Fallacy' makes you think past random events affect future probabilities (they don't)." },
+            { emoji: "🧠", text: "Your brain has about 86 billion neurons, each capable of making thousands of connections with other neurons." },
+            { emoji: "😊", text: "Awe experiences (viewing vast landscapes, art, etc.) can make you feel you have more time and increase life satisfaction." },
+            { emoji: "🌙", text: "Nightmare disorder affects 2-8% of adults and can be successfully treated with imagery rehearsal therapy." },
+            { emoji: "💭", text: "The 'Google Effect' or 'digital amnesia' means relying on search engines is changing how we form memories." },
+            { emoji: "🎨", text: "Synesthesia can be temporarily induced through hypnosis or certain substances, showing brain plasticity." },
+            { emoji: "🌊", text: "Floating in sensory deprivation tanks reduces cortisol by 25% and increases theta brain waves associated with creativity." },
+            { emoji: "😌", text: "The 'Relaxation Response' (opposite of stress response) can be triggered in just 60 seconds with proper breathing." },
+            { emoji: "🎵", text: "Music training enhances executive function, working memory, and processing speed more than other activities." },
+            { emoji: "💪", text: "Intermittent fasting can increase BDNF (brain fertilizer) and promote neurogenesis in the hippocampus." },
+            { emoji: "👀", text: "Humans can distinguish about 10 million different colors, but we only have names for about 11 basic color categories." },
+            { emoji: "🌟", text: "The 'Mandela Effect' is when large groups share the same false memory, showing how memory is reconstructive." },
+            { emoji: "🎯", text: "Implementation intentions ('if-then' plans) are twice as effective as simple goals for behavior change." },
+            { emoji: "😴", text: "Your brain can form new memories during certain sleep stages, which is why sleep-learning has some limited effectiveness." },
+            { emoji: "🎭", text: "The 'Actor-Observer Bias' means you attribute your actions to situations but others' actions to their personalities." },
+            { emoji: "💡", text: "Incidental learning (learning without trying) can be as effective as intentional learning for certain types of information." },
+            { emoji: "🌈", text: "Chromotherapy (color therapy) has limited scientific support, but colors do affect mood through learned associations." },
+            { emoji: "😊", text: "Prosocial spending (buying for others) creates more lasting happiness than buying things for yourself." },
+            { emoji: "🧠", text: "Your brain's white matter (connections) continues developing into your 40s, while gray matter (processing) peaks earlier." },
+            { emoji: "🎵", text: "Singing can reduce cortisol, increase oxytocin, and synchronize breathing with others, creating social bonding." },
+            { emoji: "💭", text: "The 'Zeigarnick Effect' means unfinished tasks create cognitive tension that keeps them in your mind until completion." },
+            { emoji: "🌸", text: "Grounding or 'earthing' (bare skin contact with earth) may reduce inflammation and improve sleep quality." },
+            { emoji: "🎯", text: "The 'Focusing Illusion' makes you overestimate the impact of any single factor on your overall happiness." },
+            { emoji: "😴", text: "REM sleep behavior disorder causes people to physically act out dreams and can be an early sign of Parkinson's." },
+            { emoji: "💪", text: "The 'Proteus Effect' shows that your avatar's appearance in virtual worlds affects your real-world behavior." },
+            { emoji: "🌟", text: "Your brain forms first impressions in just 7 seconds, and these judgments are hard to change later." },
+            { emoji: "🎨", text: "Art therapy activates the reward system while bypassing language centers, helpful for processing trauma." },
+            { emoji: "😊", text: "The 'Hedonic Treadmill' explains why lottery winners return to baseline happiness within a year." },
+            { emoji: "🌙", text: "Circadian rhythm disruption (like shift work) increases risk of depression, diabetes, and cardiovascular disease." },
+            { emoji: "💡", text: "The 'IKEA Effect' extends beyond furniture - you value anything more when you've invested effort into it." },
+            { emoji: "🎭", text: "Your 'mental time travel' ability (imagining past and future) is unique to humans and develops around age 4." },
+            { emoji: "🌊", text: "Negative ions from waterfalls and beaches may boost serotonin levels, improving mood and energy." },
+            { emoji: "😴", text: "Sleep pressure builds from adenosine accumulation in the brain - caffeine works by blocking adenosine receptors." },
+            { emoji: "🎯", text: "The 'Ostrich Effect' describes avoiding negative information, like not checking bank balances when worried about money." },
+            { emoji: "💭", text: "Your brain's prediction errors (when reality doesn't match expectations) drive learning and memory formation." },
+            { emoji: "🌟", text: "Face blindness (prosopagnosia) affects 2-3% of people, making it difficult to recognize even familiar faces." },
+            { emoji: "🎵", text: "Drumming synchronizes brain waves between participants, creating a sense of unity and collective consciousness." },
+            { emoji: "😊", text: "Acts of altruism activate the ventral striatum, the same brain region activated by food and sex." },
+            { emoji: "🧠", text: "Your brain's corpus callosum is larger in musicians, especially those who started training before age 7." },
+            { emoji: "🌈", text: "The 'Birthday Blues' phenomenon shows many people feel disappointed on their birthdays due to unrealistic expectations." },
+            { emoji: "💪", text: "Exercise-induced myokines (muscle hormones) cross the blood-brain barrier and promote neuroplasticity." },
+            { emoji: "🎨", text: "Looking at fractals (patterns found in nature) reduces stress by up to 60% within just 60 seconds." },
+            { emoji: "😴", text: "The suprachiasmatic nucleus (SCN) in your hypothalamus is your master biological clock, controlling circadian rhythms." },
+            { emoji: "🌸", text: "Forest air contains phytoncides (plant compounds) that boost immune function for up to 30 days after exposure." },
+            { emoji: "🎯", text: "The 'Curse of the Mindset' means your implicit beliefs about intelligence and ability shape your actual performance." },
+            { emoji: "💡", text: "Convergent thinking (finding single correct solutions) activates different brain networks than divergent thinking." },
+            { emoji: "👥", text: "The 'Bystander Effect' can be overcome by making eye contact with a specific person and asking them directly for help." },
+            { emoji: "🌟", text: "Your brain's fusiform gyrus specializes in recognizing faces so much that you can see faces in random objects." },
+            { emoji: "😊", text: "Savoring positive experiences by sharing them with others amplifies happiness more than experiencing them alone." },
+            { emoji: "🎭", text: "The 'Self-Serving Bias' makes you attribute successes to yourself but blame failures on external factors." },
+            { emoji: "💭", text: "Mental imagery uses about 90% of the same neural pathways as actual perception, making visualization powerful." },
+            { emoji: "🌙", text: "Melatonin onset typically happens 2 hours before natural sleep time, signaling the body's biological night." },
+            { emoji: "🎵", text: "Binaural beats (different frequencies in each ear) can alter brain wave patterns, though effects are modest." },
+            { emoji: "😴", text: "Sleep deprivation impairs the brain's glymphatic system, which clears toxic proteins like beta-amyloid." },
+            { emoji: "🧠", text: "Your prefrontal cortex doesn't fully mature until age 25, which explains increased risk-taking in young adults." },
+            { emoji: "🌊", text: "Hydrotherapy contrast (hot-cold alternation) stimulates the vagus nerve, improving mood and reducing inflammation." },
+            { emoji: "💪", text: "The 'Growth Mindset' can be strengthened by praising effort and strategy rather than innate ability or intelligence." },
+            { emoji: "🎨", text: "Bilateral art making (using both hands simultaneously) can integrate left and right brain hemispheres." },
+            { emoji: "😊", text: "The 'Duchenne Smile' (genuine smile using eye muscles) activates different brain regions than fake smiles." },
+            { emoji: "🌟", text: "Your brain's fusiform face area can recognize faces even when upside down, though less efficiently." },
+            { emoji: "🎯", text: "The 'Hindsight Bias' or 'I-knew-it-all-along effect' makes past events seem more predictable than they were." },
+            { emoji: "💡", text: "Mind-wandering occupies 30-50% of waking hours and is essential for creativity and problem-solving." },
+            { emoji: "🌈", text: "Color constancy allows your brain to perceive colors as stable despite changing lighting conditions." },
+            { emoji: "😴", text: "Sleep spindles in stage 2 sleep protect sleep from disruption and correlate with IQ scores." },
+            { emoji: "🎭", text: "The 'Impostor Phenomenon' is more common in high-achieving women and minorities due to stereotype threat." },
+            { emoji: "💭", text: "Your brain's anterior cingulate cortex detects conflicts between thoughts and behaviors, creating discomfort." },
+            { emoji: "🌸", text: "Horticulture therapy improves cognitive function in dementia patients by engaging multiple senses and memories." },
+            { emoji: "🎵", text: "The 'Mozart Effect' is real but modest - spatial reasoning improves temporarily from listening to complex music." },
+            { emoji: "😊", text: "Post-traumatic growth (positive changes after trauma) occurs in 30-70% of trauma survivors." },
+            { emoji: "💪", text: "The 'Köhler Effect' shows that weaker group members work harder when in teams, improving overall performance." },
+            { emoji: "🌟", text: "Your brain's amygdala can detect threats in just 12 milliseconds, faster than conscious awareness." },
+            { emoji: "🧠", text: "Neurogenesis (birth of new neurons) occurs throughout life in the hippocampus and olfactory bulb." },
+            { emoji: "🎯", text: "The 'Planning Paradox' shows that detailed plans often fail because they don't account for unexpected obstacles." },
+            { emoji: "😴", text: "Lucid dreaming occurs most often in the early morning hours when REM sleep periods are longest." },
+            { emoji: "🌊", text: "The rhythmic sound of waves entrains brain waves to alpha frequency (8-12 Hz), inducing relaxation." },
+            { emoji: "💡", text: "The 'Eureka Effect' involves sudden insight when the right hemisphere connects distant associations." },
+            { emoji: "🎨", text: "Viewing art in museums activates the default mode network, similar to self-reflection and daydreaming." },
+            { emoji: "😊", text: "The 'Broaden-and-Build Theory' shows positive emotions expand awareness and build lasting personal resources." },
+            { emoji: "🌟", text: "Your brain can generate new memories during sleep consolidation, creating false memories of events that never happened." }
+        ];
+
+        let currentIndex = 0;
+        let viewedFacts = new Set([0]);
+
+        function displayFact(index) {
+            const card = document.getElementById('factCard');
+            card.classList.add('flip');
+            
+            setTimeout(() => {
+                document.getElementById('emoji').textContent = facts[index].emoji;
+                document.getElementById('factNumber').textContent = `Fact ${index + 1} of ${facts.length}`;
+                document.getElementById('factText').textContent = facts[index].text;
+                updateProgress();
+                card.classList.remove('flip');
+            }, 250);
+        }
+
+        function nextFact() {
+            currentIndex = (currentIndex + 1) % facts.length;
+            viewedFacts.add(currentIndex);
+            displayFact(currentIndex);
+        }
+
+        function randomFact() {
+            currentIndex = Math.floor(Math.random() * facts.length);
+            viewedFacts.add(currentIndex);
+            displayFact(currentIndex);
+        }
+
+        function updateProgress() {
+            const percentage = Math.round((viewedFacts.size / facts.length) * 100);
+            document.getElementById('progress').textContent = `${percentage}% explored (${viewedFacts.size}/${facts.length} facts)`;
+        }
+
+        // Initialize with first fact
+        displayFact(0);
+    </script>
+</body>
+</html>
